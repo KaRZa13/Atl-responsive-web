@@ -62,7 +62,9 @@ $ npm install
 $ npm start
 ```
 
-Accéder à l'application : Après avoir démarré l'application, ouvrez votre navigateur et accédez à :
+### Accéder à l'application : 
+
+Après avoir démarré l'application, ouvrez votre navigateur et accédez à :
 
     http://localhost:3000/home.html
 
