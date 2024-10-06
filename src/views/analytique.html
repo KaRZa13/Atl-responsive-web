@@ -40,12 +40,15 @@
     <div class="sidebar sidebar-dark sidebar-fixed border-end" id="sidebar">
         <div class="sidebar-header border-bottom">
             <div class="sidebar-brand">
-                <svg class="sidebar-brand-full" width="88" height="32" alt="CoreUI Logo">
-                    <use xlink:href="assets/brand/coreui.svg#full"></use>
-                </svg>
-                <svg class="sidebar-brand-narrow" width="32" height="32" alt="CoreUI Logo">
-                    <use xlink:href="assets/brand/coreui.svg#signet"></use>
-                </svg>
+                <div class="row">
+                    <div class="col-4 justify-content-center align-items-center">
+                        <div class="avatar avatar-md">
+                            <img class="avatar-img" src="https://img.freepik.com/vecteurs-libre/modele-logo-atheisme-design-plat-dessine-main_23-2149251681.jpg?t=st=1728228642~exp=1728232242~hmac=40b4f28db738894a9d245a9624aa3994d647e7f6c7a0fb238fabaf67c876e07f&w=1380" alt="">
+                            <svg class="sidebar-brand-narrow" width="32" height="32" alt="CoreUI Logo"><use xlink:href="assets/brand/coreui.svg#signet"></use></svg>
+                        </div>
+                    </div>
+                    <div class="col-8 justify-content-center align-items-center px-2 mb-2">AgenceIMMO</div>
+                </div>
             </div>
             <button class="btn-close d-lg-none" type="button" data-coreui-dismiss="offcanvas" data-coreui-theme="dark"
                 aria-label="Close"
@@ -224,8 +227,9 @@
             <div class="container-fluid px-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb my-0">
-                        <li class="breadcrumb-item"><a href="#">Home</a>
-                        </li>
+                        <li class="breadcrumb-item"><a href="home.html">Accueil</a></li>
+                        <li class="breadcrumb-item active">Mes chiffres</li>
+                        <li class="breadcrumb-item active">Analytique</li>
                     </ol>
                 </nav>
             </div>
@@ -254,9 +258,7 @@
             
 
         <footer class="footer px-4">
-            <div><a href="https://coreui.io">CoreUI </a><a
-                    href="https://coreui.io/product/free-bootstrap-admin-template/">Bootstrap Admin Template</a> &copy;
-                2024 creativeLabs.</div>
+            <div>&copy; 2024 AgenceImmo</div>
             <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
         </footer>
     </div>
@@ -305,16 +307,16 @@
     <script>
         const dataRadar = {
             labels: [
-                'Eating',
-                'Drinking',
-                'Sleeping',
-                'Designing',
-                'Coding',
-                'Cycling',
-                'Running'
+                'Bruges',
+                'Bordeaux',
+                'Bègles',
+                'Talence',
+                "Villenave d'Ornon",
+                'Floirac',
+                'Cenon'
             ],
             datasets: [{
-                label: 'My First Dataset',
+                label: 'Locations',
                 data: [65, 59, 90, 81, 56, 55, 40],
                 fill: true,
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -324,8 +326,8 @@
                 pointHoverBackgroundColor: '#fff',
                 pointHoverBorderColor: 'rgb(255, 99, 132)'
             }, {
-                label: 'My Second Dataset',
-                data: [28, 48, 40, 19, 96, 27, 100],
+                label: 'Ventes',
+                data: [58, 48, 60, 79, 96, 27, 91],
                 fill: true,
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: 'rgb(54, 162, 235)',
@@ -355,9 +357,9 @@
     <script>
         const dataDoughnut = {
             labels: [
-                'Red',
-                'Blue',
-                'Yellow'
+                'Ventes conclus',
+                'Vendeurs potentiel',
+                'Dossier en cours'
             ],
             datasets: [{
                 label: 'My First Dataset',
