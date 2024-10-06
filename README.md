@@ -70,7 +70,7 @@ Après avoir démarré l'application, ouvrez votre navigateur et accédez à :
 
 ## Structure du projet
 
-    /src/views : Contient toutes les pages maquetter.
+    /src/views : Contient toutes les pages maquettées.
     /assets : Dossier des ressources (images, icônes, etc.).
 
 ## Technologies utilisées
