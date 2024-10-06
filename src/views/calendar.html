@@ -34,6 +34,94 @@
     <script src="js/config.js"></script>
     <script src="js/color-modes.js"></script>
     <link href="node_modules/@coreui/chartjs/dist/css/coreui-chartjs.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../scss/_custom.scss">
+    <style>
+        /* Méthode horrible mais impossible de mettre du css dans custom.scss, quand je "npm start", ça reinitialise l'ensemble des fichiers de base   */
+        body {
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            box-sizing:
+                border-box;
+            box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+            font-family: 'Ubuntu';
+            border-collapse: collapse;
+            border-spacing: 0;
+            background-color: #333333;
+        }
+
+        th,
+        td {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-sizing: border-box;
+        }
+
+        th {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 10px 0;
+            color: rgba(255, 255, 255, 0.5);
+            background-color: #292929;
+            letter-spacing: 1px;
+        }
+
+        td {
+            width: 14.285%;
+            transition: all 0.3s;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
+            font-size: 14px;
+            padding: 1.5% 1.5% 5%;
+            vertical-align: initial;
+            padding: 1.5% 0;
+            height: 75px;
+        }
+
+        .day:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .today {
+            color: #FFF;
+            background-color: rgba(0, 0, 0, .25) !important;
+        }
+
+        span.number {
+            margin-left: 10%
+        }
+
+        span.event {
+            height: 4px;
+            background-color: rgba(0, 0, 0, .3);
+            display: block;
+            margin: 5px 10%;
+            border-radius: 2px;
+            background-color: #91c33b;
+        }
+
+        span.event-multiday {
+            margin: 5px -2px;
+            border-radius: 0;
+        }
+
+        span.event-multiday-start {
+            margin-right: -4px;
+        }
+
+        span.event-multiday-finish {
+            margin-left: -4px;
+        }
+
+        span.event-ghost {
+            background-color: transparent;
+        }
+    </style>
 </head>
 
 <body>
@@ -230,124 +318,75 @@
                 </nav>
             </div>
         </header>
-
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/agent-immobilier-serrant-main-du-client-tenant-cles_23-2147797599.jpg?t=st=1727964813~exp=1727968413~hmac=7e65330d2d94e14fb07a10dde19e86807c9a21cc685dc02e6c979abb985c4377&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/femme-montrant-main-mini-maison-concept-etat-reel-ai-generative_123827-24098.jpg?t=st=1727964735~exp=1727968335~hmac=d4d3481e50180baf606bf2b9f96fa4da4ed5ebfbdaee9d1cb49f3f1865f70c6a&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/paysage-analogique-ville-batiments_23-2149661456.jpg?t=st=1727964959~exp=1727968559~hmac=b15d810ea6155e71a4d4624f4b4515845085a9edc5051f85adef5d1727503c47&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/paysage-analogique-ville-batiments_23-2149661459.jpg?t=st=1727964979~exp=1727968579~hmac=02b14d69edd893f8e1b2246bc313c321523aa3b9f8336e4621e18e6aae7c171e&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/maison-haute-vue-jardin-cles-plan_23-2148301697.jpg?t=st=1727965114~exp=1727968714~hmac=c87bb4d1eb4b95feea7325f1542e449c624341b67799105fc50190ee38fb0a4b&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/villa-luxe-piscine-design-contemporain-spectaculaire-art-numerique-immobilier-maison-maison-propriete-ge_1258-150755.jpg?t=st=1727965132~exp=1727968732~hmac=407e7ef1a7247881c1084a3defd27fcb5fcecfcfb4f30be41d65cfe9ce558aef&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/assortiment-elements-investissements-dans-maison_23-2148793805.jpg?t=st=1727965205~exp=1727968805~hmac=278470b20e45b445a18f1079f7bdc367e53437aa317697569f91ddf97242bc95&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/coucher-soleil-ville_1127-3932.jpg?t=st=1727965314~exp=1727968914~hmac=f225c8cd3e35c9e0e198f087b4dc16b3a04894859057a796d4b10769240c1941&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/logement-banlieue_53876-14307.jpg?t=st=1727965345~exp=1727968945~hmac=85012098530e4f844ad3c4267c30b1fea4c6e7b684a309dc6366b37418e7721e&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/belle-route-long-maisons-rurales-paysage-montagneux_181624-29131.jpg?t=st=1727965379~exp=1727968979~hmac=292782a3df3f8feec1de49a6e892904a947ad8b37d9d64a5a4125dff0a4efa6a&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/pile-pieces-monnaie-fond-blanc-graphique_23-2147919107.jpg?t=st=1727965407~exp=1727969007~hmac=c0a96de17a8987fabc8a8b1a27ae5ddfc5d64daedb574524f79cb93f5e75566f&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <div class="card" style="max-width: 100%;">
-                        <img src="https://img.freepik.com/photos-gratuite/vue-aerienne-baie-guanabara-rio-janeiro-bresil_181624-15517.jpg?t=st=1727965482~exp=1727969082~hmac=85dbe02ca5aaff1c985dce876a62ac68b12f5166c7b9531ac57b5afd14dee25f&w=1800" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="container-fluid px-4">
+            <div class="row mb-2">
+                <table>
+                    <tr>
+                        <th class="day-name">Mon</th>
+                        <th class="day-name">Tue</th>
+                        <th class="day-name">Wed</th>
+                        <th class="day-name">Thu</th>
+                        <th class="day-name">Fri</th>
+                        <th class="day-name">Sat</th>
+                        <th class="day-name">Sun</th>
+                    </tr>
+                    <tr>
+                        <td class="day"><span class="number">31</span></td>
+                        <td class="day"><span class="number">1</span><span class="event"></span><span class="event"></span></td>
+                        <td class="day"><span class="number">2</span></td>
+                        <td class="day"><span class="number">3</span><span class="event event-multiday-start"></span></td>
+                        <td class="day"><span class="number">4</span><span class="event event-multiday"></span><span class="event event-multiday-start eventclass" style="background-color:#5a9ab2;"></span><span class="event"></td>
+                        <td class="day"><span class="number">5</span><span class="event event-multiday-finish"></span><span class="event event-multiday eventclass" style="background-color:#5a9ab2;"></span></td>
+                        <td class="day"><span class="number">6</span><span class="event event-ghost"></span><span class="event event-multiday-finish eventclass" style="background-color:#5a9ab2;"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="day"><span class="number">7</span></td>
+                        <td class="day"><span class="number">8</span><span class="event"></span></td>
+                        <td class="day"><span class="number">9</span></td>
+                        <td class="day"><span class="number">10</span></td>
+                        <td class="day"><span class="number">11</span></td>
+                        <td class="day"><span class="number">12</span></td>
+                        <td class="day"><span class="number">13</span></td>
+                    </tr>
+                    <tr>
+                        <td class="day"><span class="number">14</span></td>
+                        <td class="day"><span class="number">15</span></td>
+                        <td class="day"><span class="number">16</span><span class="event"></span></td>
+                        <td class="day"><span class="number">17</span><span class="event"></span></td>
+                        <td class="day"><span class="number">18</span></td>
+                        <td class="day"><span class="number">19</span></td>
+                        <td class="day"><span class="number">20</span></td>
+                    </tr>
+                    <tr>
+                        <td class="day"><span class="number">21</span></td>
+                        <td class="day"><span class="number">22</span></td>
+                        <td class="day"><span class="number">23</span></td>
+                        <td class="day"><span class="number">24</span></td>
+                        <td class="day"><span class="number">25</span></td>
+                        <td class="day"><span class="number">26</span></td>
+                        <td class="day"><span class="number">27</span><span class="event event-multiday-start" style="background-color:#da5f5f;"></td>
+                    </tr>
+                    <tr>
+                        <td class="day"><span class="number">28</span><span class="event event-multiday" style="background-color:#da5f5f;"></td>
+                        <td class="day today"><span class="number">29</span><span class="event event-multiday-finish" style="background-color:#da5f5f;"></td>
+                        <td class="day"><span class="number">30</span></td>
+                        <td class="day"><span class="number">1</span></td>
+                        <td class="day"><span class="number">2</span></td>
+                        <td class="day"><span class="number">3</span></td>
+                        <td class="day"><span class="number">4</span></td>
+                    </tr>
+                    <tr>
+                        <td class="day"><span class="number">5</span></td>
+                        <td class="day"><span class="number">6</span><span class="event"></span></td>
+                        <td class="day"><span class="number">7</span></td>
+                        <td class="day"><span class="number">8</span></td>
+                        <td class="day"><span class="number">9</span></td>
+                        <td class="day"><span class="number">10</span></td>
+                        <td class="day"><span class="number">11</span></td>
+                    </tr>
+                </table>
             </div>
         </div>
-
         <footer class="footer px-4">
             <div><a href="https://coreui.io">CoreUI </a><a
                     href="https://coreui.io/product/free-bootstrap-admin-template/">Bootstrap Admin Template</a> &copy;
@@ -355,19 +394,7 @@
             <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
         </footer>
     </div>
-    <script src="node_modules/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
-    <script src="node_modules/simplebar/dist/simplebar.min.js"></script>
-    <script>
-        const header = document.querySelector('header.header');
-
-        document.addEventListener('scroll', () => {
-                if (header) {
-                    header.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0);
-                }
-            }
-        );
-
-    </script>
+    
     <script src="node_modules/chart.js/dist/chart.umd.js"></script>
     <script src="node_modules/@coreui/chartjs/dist/js/coreui-chartjs.js"></script>
     <script src="node_modules/@coreui/utils/dist/umd/index.js"></script>
